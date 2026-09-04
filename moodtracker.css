@@ -1,0 +1,551 @@
+/* =========================================
+   DIGIDIARY - MOOD TRACKER
+   Soft Sage + Cream
+   Clean & Spacious Layout
+   ========================================= */
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    background: #f8f5ed;
+
+    color: #3f5144;
+}
+
+
+/* =========================================
+   MAIN MOOD CONTAINER
+   ========================================= */
+
+.mood-container {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.mood-header {
+    padding: 5px 5px 30px;
+
+    margin-bottom: 15px;
+}
+
+
+.mood-header .small-text {
+    font-size: 13px;
+
+    color: #9a9f92;
+
+    margin-bottom: 8px;
+}
+
+
+.mood-header h1 {
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: #405a45;
+
+    margin-bottom: 10px;
+}
+
+
+.mood-header p {
+    font-size: 15px;
+
+    color: #7d8877;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MOOD SECTION
+   ========================================= */
+
+.mood-section {
+    background: #fffdf8;
+
+    border: 1px solid #e7e9df;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(53, 68, 56, 0.05);
+}
+
+
+/* =========================================
+   MOOD TITLE
+   ========================================= */
+
+.mood-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding-bottom: 24px;
+
+    margin-bottom: 24px;
+
+    border-bottom: 1px solid #edf0e8;
+}
+
+
+.mood-icon {
+    width: 62px;
+
+    height: 62px;
+
+    min-width: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #edf3e9;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+}
+
+
+.mood-title h2 {
+    color: #4d6148;
+
+    font-size: 24px;
+
+    font-weight: 650;
+
+    margin-bottom: 5px;
+}
+
+
+.mood-title span {
+    color: #9a9f92;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ENTRIES GRID
+   ========================================= */
+
+.mood-entries-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   ENTRY CARD
+   ========================================= */
+
+.mood-entry-card {
+    background: #f9f7f0;
+
+    border: 1px solid #e8eadf;
+
+    border-radius: 18px;
+
+    padding: 23px;
+
+    min-height: 230px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.mood-entry-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #d7e1d2;
+
+    box-shadow:
+        0 10px 25px
+        rgba(82, 102, 75, 0.10);
+}
+
+
+/* =========================================
+   ENTRY DATE
+   ========================================= */
+
+.mood-entry-date {
+    color: #9a9f92;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    margin-bottom: 13px;
+}
+
+
+/* =========================================
+   ENTRY TITLE
+   ========================================= */
+
+.mood-entry-card h3 {
+    color: #4b5f46;
+
+    font-size: 19px;
+
+    font-weight: 650;
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   ENTRY CONTENT
+   ========================================= */
+
+.mood-entry-card p {
+    color: #777e73;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+    word-break: break-word;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 4;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   VIEW ENTRY BUTTON
+   ========================================= */
+
+.view-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    align-self: flex-start;
+
+    margin-top: auto;
+
+    padding: 9px 15px;
+
+    border-radius: 10px;
+
+    background: #e5eddf;
+
+    color: #607457;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+
+.view-btn:hover {
+    background: #d5e2cf;
+
+    color: #43563d;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+   ========================================= */
+
+.no-entries {
+    background: #fffdf8;
+
+    border: 1px solid #e5e8dc;
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    padding: 90px 30px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(53, 68, 56, 0.05);
+}
+
+
+.no-entry-icon {
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #edf3e9;
+
+    border-radius: 22px;
+
+    font-size: 38px;
+}
+
+
+.no-entries h2 {
+    color: #52664b;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.no-entries p {
+    color: #858c80;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   WRITE ENTRY BUTTON
+   ========================================= */
+
+.write-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: #8da383;
+
+    color: white;
+
+    padding: 12px 21px;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+
+.write-btn:hover {
+    background: #768d6c;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px
+        rgba(118, 141, 108, 0.20);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .mood-entries-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .mood-section {
+        padding: 25px;
+    }
+
+
+    .mood-entries-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .mood-entry-card {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .mood-header {
+        padding-bottom: 20px;
+    }
+
+
+    .mood-header h1 {
+        font-size: 28px;
+    }
+
+
+    .mood-section {
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .mood-title {
+        gap: 14px;
+
+        padding-bottom: 20px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .mood-icon {
+        width: 52px;
+
+        height: 52px;
+
+        min-width: 52px;
+
+        border-radius: 15px;
+
+        font-size: 25px;
+    }
+
+
+    .mood-title h2 {
+        font-size: 21px;
+    }
+
+
+    .mood-entries-grid {
+        gap: 15px;
+    }
+
+
+    .mood-entry-card {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 450px) {
+
+    .mood-header h1 {
+        font-size: 25px;
+    }
+
+
+    .mood-section {
+        padding: 17px;
+    }
+
+
+    .mood-title {
+        gap: 12px;
+    }
+
+
+    .mood-icon {
+        width: 48px;
+
+        height: 48px;
+
+        min-width: 48px;
+
+        font-size: 23px;
+    }
+
+
+    .mood-entry-card {
+        padding: 18px;
+    }
+
+}

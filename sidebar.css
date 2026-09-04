@@ -1,0 +1,270 @@
+/* =====================================================
+   DIGIDIARY SIDEBAR
+   ===================================================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: #eef4e8;
+
+    border-right: 1px solid #d8e2d0;
+
+    padding: 30px 18px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+}
+
+
+/* =====================================================
+   BRAND
+   ===================================================== */
+
+.brand {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.brand h1 {
+    margin: 0;
+
+    color: #40513b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    font-style: italic;
+
+    letter-spacing: 1px;
+}
+
+.brand p {
+    margin: 5px 0 0;
+
+    color: #d7899c;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   SIDEBAR NAVIGATION
+   ===================================================== */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    color: #56634f;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    background: #dfead8;
+
+    color: #394b34;
+
+    transform: translateX(3px);
+}
+
+.nav-item.active {
+    background: #cdddc3;
+
+    color: #35452f;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   SIDEBAR BOTTOM
+   ===================================================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #d8e2d0;
+}
+
+.sidebar-bottom .logout {
+    color: #9b5968;
+}
+
+.sidebar-bottom .logout:hover {
+    background: #f4e0e4;
+
+    color: #8c4355;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+   ===================================================== */
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #c8d5bf;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   SHARED MAIN CONTENT
+   THIS IS IMPORTANT
+   ===================================================== */
+
+.main-content {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    padding: 35px 45px;
+
+    background: #faf9f3;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 215px;
+
+        padding: 25px 14px;
+    }
+
+    .brand h1 {
+        font-size: 24px;
+    }
+
+    .nav-item {
+        padding: 11px 12px;
+
+        font-size: 13px;
+    }
+
+    .main-content {
+        margin-left: 215px;
+
+        width: calc(100% - 215px);
+
+        padding: 30px 25px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        width: 72px;
+
+        padding: 25px 9px;
+    }
+
+    .brand h1 {
+        font-size: 0;
+    }
+
+    .brand h1::after {
+        content: "D";
+
+        font-family: Georgia, "Times New Roman", serif;
+
+        font-size: 26px;
+
+        font-style: italic;
+
+        font-weight: 800;
+
+        color: #40513b;
+    }
+
+    .brand p {
+        display: none;
+    }
+
+    .nav-item {
+        justify-content: center;
+
+        padding: 13px 8px;
+
+        gap: 0;
+    }
+
+    .nav-item span {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 72px;
+
+        width: calc(100% - 72px);
+
+        padding: 25px 15px;
+    }
+}

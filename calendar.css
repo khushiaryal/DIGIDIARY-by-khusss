@@ -1,0 +1,967 @@
+/* =====================================================
+   DIGIDIARY - CALENDAR
+   Soft Sage + Cream Theme
+   ===================================================== */
+
+
+/* =====================================================
+   GLOBAL RESET
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background: #faf9f3;
+    color: #5f685e;
+}
+
+
+/* =====================================================
+   CALENDAR PAGE
+   ===================================================== */
+
+.calendar-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 40px 60px;
+}
+
+
+/* =====================================================
+   CALENDAR HEADER
+   ===================================================== */
+
+.calendar-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   NEW ENTRY BUTTON
+   ===================================================== */
+
+.new-entry-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: #78967b;
+    color: white;
+
+    padding: 11px 19px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+
+    box-shadow: 0 5px 15px rgba(78, 105, 81, 0.12);
+}
+
+.new-entry-button:hover {
+    background: #66866b;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(78, 105, 81, 0.18);
+}
+
+
+/* =====================================================
+   MAIN CALENDAR AREA
+   ===================================================== */
+
+.calendar-main {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.calendar-intro {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+.intro-small {
+    color: #c77f8b;
+
+    font-size: 14px;
+    font-style: italic;
+
+    margin: 0 0 7px;
+}
+
+.calendar-intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+
+    color: #405a45;
+
+    margin: 0 0 8px;
+
+    font-weight: 700;
+}
+
+.calendar-intro > p:last-child {
+    color: #7b857b;
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   CALENDAR CARD
+   ===================================================== */
+
+.calendar-card {
+    width: 100%;
+
+    background: #fffdf8;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    border: 1px solid #e5e8dc;
+
+    box-shadow: 0 8px 25px rgba(53, 68, 56, 0.05);
+}
+
+
+/* =====================================================
+   MONTH NAVIGATION
+   ===================================================== */
+
+.calendar-navigation {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+    padding: 0 5px;
+}
+
+.calendar-navigation h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    color: #405a45;
+
+    font-weight: 700;
+
+    margin: 0;
+}
+
+.month-button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: #edf3e9;
+
+    color: #5f735f;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    transition: all 0.25s ease;
+}
+
+.month-button:hover {
+    background: #dce7d9;
+
+    transform: scale(1.07);
+}
+
+
+/* =====================================================
+   WEEKDAYS
+   ===================================================== */
+
+.weekdays {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    margin-bottom: 8px;
+}
+
+.weekdays div {
+    text-align: center;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #92998f;
+
+    padding: 9px 0;
+}
+
+
+/* =====================================================
+   CALENDAR GRID
+   ===================================================== */
+
+.calendar-grid {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 7px;
+}
+
+
+/* =====================================================
+   CALENDAR DAY
+   ===================================================== */
+
+.calendar-day {
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border-radius: 15px;
+
+    transition: background 0.25s ease;
+}
+
+.calendar-day:not(.empty):hover {
+    background: #f4f7f0;
+}
+
+.calendar-day.empty {
+    background: transparent;
+}
+
+
+/* =====================================================
+   NORMAL DATE
+   ===================================================== */
+
+.day-number {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #687267;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   TODAY
+   ===================================================== */
+
+.calendar-day.today {
+    background: #f5f0e6;
+}
+
+.calendar-day.today .day-number {
+    width: 42px;
+    height: 42px;
+
+    border: 2px solid #78967b;
+
+    border-radius: 50%;
+
+    color: #4e674f;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DAY LINK
+   ===================================================== */
+
+.day-link {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    position: relative;
+}
+
+
+/* =====================================================
+   PAINT HIGHLIGHT
+   ===================================================== */
+
+.paint-highlight {
+    width: 44px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #526052;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   PAINT LAYER 1
+   ===================================================== */
+
+.paint-highlight::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: -1;
+
+    width: 52px;
+    height: 27px;
+
+    background: #cbdcbf;
+
+    border-radius: 45% 55% 48% 52%;
+
+    transform: rotate(-5deg);
+
+    opacity: 0.85;
+
+    transition: all 0.25s ease;
+}
+
+
+/* =====================================================
+   PAINT LAYER 2
+   ===================================================== */
+
+.paint-highlight::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: -2;
+
+    width: 45px;
+    height: 20px;
+
+    background: #dce8d2;
+
+    border-radius: 50%;
+
+    transform: rotate(5deg);
+
+    opacity: 0.8;
+
+    transition: all 0.25s ease;
+}
+
+
+/* =====================================================
+   ENTRY HOVER
+   ===================================================== */
+
+.calendar-day.has-entry:hover {
+    background: #f7f8f2;
+}
+
+.calendar-day.has-entry:hover .paint-highlight::before {
+    transform: rotate(-5deg) scale(1.12);
+
+    background: #bcd2af;
+}
+
+
+/* =====================================================
+   LEGEND
+   ===================================================== */
+
+.calendar-legend {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #ecece3;
+}
+
+.legend-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    color: #858b81;
+}
+
+
+/* =====================================================
+   LEGEND PAINT
+   ===================================================== */
+
+.legend-paint {
+    width: 30px;
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    color: #596657;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.legend-paint::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: -1;
+
+    width: 32px;
+    height: 18px;
+
+    background: #cbdcbf;
+
+    border-radius: 50%;
+
+    transform: rotate(-5deg);
+}
+
+
+/* =====================================================
+   LEGEND TODAY
+   ===================================================== */
+
+.legend-today {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #78967b;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    color: #657664;
+}
+
+
+/* =====================================================
+   MONTH ENTRIES
+   ===================================================== */
+
+.month-entries {
+    margin-top: 30px;
+}
+
+.month-entries h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 19px;
+
+    color: #405a45;
+
+    margin: 0 0 15px;
+}
+
+
+/* =====================================================
+   MINI ENTRY
+   ===================================================== */
+
+.mini-entry {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    text-decoration: none;
+
+    background: #fffdf8;
+
+    padding: 14px 17px;
+
+    margin-bottom: 10px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e4e9df;
+
+    transition: all 0.25s ease;
+}
+
+.mini-entry:hover {
+    transform: translateX(5px);
+
+    background: #f8faf4;
+
+    border-color: #d6e2d2;
+
+    box-shadow: 0 5px 15px rgba(53, 68, 56, 0.05);
+}
+
+
+/* =====================================================
+   MINI DATE
+   ===================================================== */
+
+.mini-date {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e6eee1;
+
+    color: #5f705e;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   MINI INFO
+   ===================================================== */
+
+.mini-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.mini-info strong {
+    color: #5a6659;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.mini-info span {
+    color: #999d94;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   MINI ARROW
+   ===================================================== */
+
+.mini-arrow {
+    color: #9aaa95;
+
+    font-size: 18px;
+
+    transition: transform 0.25s ease;
+}
+
+.mini-entry:hover .mini-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   NO ENTRIES
+   ===================================================== */
+
+.no-entries {
+    margin-top: 30px;
+
+    background: #fffdf8;
+
+    border: 1px solid #ecebe2;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+}
+
+.no-entry-icon {
+    font-size: 27px;
+
+    color: #d49aa6;
+
+    margin-bottom: 8px;
+}
+
+.no-entries h3 {
+    color: #5b685b;
+
+    font-size: 18px;
+
+    margin: 0 0 7px;
+}
+
+.no-entries p {
+    color: #92978e;
+
+    font-size: 13px;
+
+    margin: 0 0 18px;
+}
+
+
+/* =====================================================
+   WRITE BUTTON
+   ===================================================== */
+
+.write-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #78967b;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.write-button:hover {
+    background: #66866b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .calendar-page {
+        padding: 25px 25px 50px;
+    }
+
+    .calendar-main {
+        max-width: 100%;
+    }
+
+    .calendar-card {
+        padding: 25px;
+    }
+
+    .calendar-day {
+        min-height: 65px;
+    }
+}
+
+
+/* =====================================================
+   SMALL TABLET
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .calendar-page {
+        padding: 20px 18px 40px;
+    }
+
+    .calendar-intro {
+        margin-bottom: 22px;
+    }
+
+    .calendar-intro h2 {
+        font-size: 29px;
+    }
+
+    .calendar-card {
+        padding: 20px;
+
+        border-radius: 18px;
+    }
+
+    .calendar-navigation h3 {
+        font-size: 21px;
+    }
+
+    .calendar-grid {
+        gap: 4px;
+    }
+
+    .calendar-day {
+        min-height: 55px;
+
+        border-radius: 11px;
+    }
+
+    .day-number {
+        width: 38px;
+        height: 38px;
+    }
+
+    .paint-highlight::before {
+        width: 43px;
+        height: 24px;
+    }
+
+    .paint-highlight::after {
+        width: 38px;
+        height: 18px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+    .calendar-page {
+        padding: 15px 12px 35px;
+    }
+
+    .new-entry-button {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .calendar-intro h2 {
+        font-size: 26px;
+    }
+
+    .calendar-intro > p:last-child {
+        font-size: 12px;
+    }
+
+    .calendar-card {
+        padding: 14px;
+
+        border-radius: 16px;
+    }
+
+    .calendar-navigation {
+        margin-bottom: 18px;
+    }
+
+    .calendar-navigation h3 {
+        font-size: 18px;
+    }
+
+    .month-button {
+        width: 35px;
+        height: 35px;
+
+        font-size: 17px;
+    }
+
+    .weekdays div {
+        font-size: 10px;
+
+        padding: 7px 0;
+    }
+
+    .calendar-grid {
+        gap: 2px;
+    }
+
+    .calendar-day {
+        min-height: 45px;
+
+        border-radius: 8px;
+    }
+
+    .day-number {
+        width: 34px;
+        height: 34px;
+
+        font-size: 13px;
+    }
+
+    .calendar-day.today .day-number {
+        width: 34px;
+        height: 34px;
+    }
+
+    .paint-highlight {
+        width: 34px;
+        height: 30px;
+
+        font-size: 13px;
+    }
+
+    .paint-highlight::before {
+        width: 36px;
+        height: 21px;
+    }
+
+    .paint-highlight::after {
+        width: 32px;
+        height: 16px;
+    }
+
+    .calendar-legend {
+        gap: 14px;
+
+        flex-wrap: wrap;
+    }
+
+    .mini-entry {
+        padding: 12px;
+    }
+
+    .mini-date {
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+    }
+
+    .mini-info strong {
+        font-size: 13px;
+    }
+
+    .mini-info span {
+        font-size: 11px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .calendar-card {
+        padding: 10px;
+    }
+
+    .calendar-day {
+        min-height: 40px;
+    }
+
+    .calendar-navigation h3 {
+        font-size: 17px;
+    }
+
+    .new-entry-button {
+        padding: 8px 9px;
+
+        font-size: 11px;
+    }
+
+    .calendar-legend {
+        gap: 10px;
+    }
+}

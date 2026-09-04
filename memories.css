@@ -1,0 +1,421 @@
+/* =====================================================
+   DIGIDIARY - MEMORIES PAGE
+   ===================================================== */
+
+
+/* =====================================================
+   PAGE HEADER
+   ===================================================== */
+
+.memories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.memories-header h1 {
+    margin: 0;
+
+    color: #40513b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    font-style: italic;
+
+    letter-spacing: 0.3px;
+}
+
+.memories-header p {
+    margin: 8px 0 0;
+
+    color: #8b9684;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MEMORY MONTH SECTION
+   ===================================================== */
+
+.memory-month {
+    margin-bottom: 45px;
+}
+
+.month-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.month-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    background: #e6efdf;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+}
+
+.month-heading h2 {
+    margin: 0;
+
+    color: #52624b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   MEMORY GRID
+   ===================================================== */
+
+.memory-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   MEMORY CARD
+   ===================================================== */
+
+.memory-card {
+    position: relative;
+
+    background: #fffdf7;
+
+    border: 1px solid #e5e8dc;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    min-height: 235px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 5px 18px rgba(75, 91, 65, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #cddbc4;
+
+    box-shadow: 0 12px 25px rgba(75, 91, 65, 0.11);
+}
+
+
+/* =====================================================
+   MEMORY DATE
+   ===================================================== */
+
+.memory-date {
+    color: #9a9f91;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 12px;
+
+    margin-bottom: 13px;
+}
+
+
+/* =====================================================
+   MEMORY TITLE
+   ===================================================== */
+
+.memory-title {
+    margin: 0 0 10px;
+
+    color: #40513b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* =====================================================
+   MEMORY MOOD
+   ===================================================== */
+
+.memory-mood {
+    display: inline-flex;
+    align-self: flex-start;
+
+    background: #f4e5e8;
+
+    color: #a06472;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    margin-bottom: 13px;
+}
+
+
+/* =====================================================
+   MEMORY PREVIEW
+   ===================================================== */
+
+.memory-preview {
+    margin: 0;
+
+    color: #737c6d;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    flex-grow: 1;
+}
+
+
+/* =====================================================
+   MEMORY FOOTER
+   ===================================================== */
+
+.memory-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #eceee6;
+}
+
+.memory-footer span {
+    color: #aaa99d;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 11px;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   READ MEMORY BUTTON
+   ===================================================== */
+
+.read-memory {
+    color: #718467;
+
+    text-decoration: none;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.read-memory:hover {
+    color: #40513b;
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   EMPTY MEMORIES
+   ===================================================== */
+
+.empty-memories {
+    max-width: 600px;
+
+    margin: 80px auto;
+
+    padding: 55px 35px;
+
+    background: #fffdf7;
+
+    border: 1px solid #e5e8dc;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(75, 91, 65, 0.06);
+}
+
+.empty-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.empty-memories h2 {
+    margin: 0 0 10px;
+
+    color: #52624b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+}
+
+.empty-memories p {
+    max-width: 400px;
+
+    margin: 0 auto 25px;
+
+    color: #8a9183;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CREATE MEMORY BUTTON
+   ===================================================== */
+
+.create-memory-btn {
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    background: #cdddc4;
+
+    color: #40513b;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.create-memory-btn:hover {
+    background: #bdcfb4;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .memory-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .memories-header h1 {
+        font-size: 27px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-card {
+        min-height: 220px;
+
+        padding: 20px;
+    }
+
+    .month-heading h2 {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+    .memories-header h1 {
+        font-size: 24px;
+    }
+
+    .memory-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}

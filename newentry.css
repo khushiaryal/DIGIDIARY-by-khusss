@@ -1,0 +1,603 @@
+/* =========================================================
+   DIGIDIARY - NEW ENTRY
+   Sidebar Layout
+   Soft Sage + Cream + Pink
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8f5ed;
+    color: #405245;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.new-entry-page {
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   CONTENT AREA
+   IMPORTANT:
+   Sidebar is fixed at 250px.
+   ========================================================= */
+
+.new-entry-content {
+    margin-left: 250px;
+    min-height: 100vh;
+
+    padding: 40px 55px 60px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #e8f0e4 0,
+            transparent 35%
+        ),
+        #f8f5ed;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.entry-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    border-radius: 11px;
+
+    background: #e3ecdf;
+
+    color: #526653;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.back-button:hover {
+    background: #d3e2d0;
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   PAGE BRAND
+   ========================================================= */
+
+.entry-page-title {
+    text-align: right;
+}
+
+.entry-page-title h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    font-style: italic;
+
+    letter-spacing: 1px;
+
+    color: #354d3b;
+}
+
+.entry-page-title p {
+    margin-top: 1px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    color: #c77f8b;
+}
+
+
+/* =========================================================
+   MAIN FORM WRAPPER
+   ========================================================= */
+
+.entry-main {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.entry-intro {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.intro-small {
+    color: #9a8c84;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.entry-intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    font-style: italic;
+
+    color: #405a45;
+
+    margin-bottom: 6px;
+}
+
+.entry-intro > p:last-child {
+    color: #7d887e;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.entry-card {
+    width: 100%;
+
+    background: #fffdf8;
+
+    border: 1px solid #e3e8dc;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 12px 35px rgba(53, 68, 56, 0.07);
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+   ========================================================= */
+
+.success-message {
+    background: #e4efe1;
+
+    border: 1px solid #d2e2cf;
+
+    color: #567158;
+
+    padding: 13px 16px;
+
+    border-radius: 11px;
+
+    margin-bottom: 22px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #526653;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #dbe3d7;
+
+    background: #fbfaf5;
+
+    color: #405245;
+
+    border-radius: 12px;
+
+    padding: 13px 15px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a9afa8;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #8ca68d;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(120, 150, 123, 0.12);
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.form-group input[type="date"] {
+    color: #59695b;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.form-group textarea {
+    min-height: 240px;
+
+    resize: vertical;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+   ========================================================= */
+
+.cancel-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    border-radius: 11px;
+
+    background: #eee9df;
+
+    color: #707a70;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.cancel-button:hover {
+    background: #e4ddd1;
+
+    color: #596359;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+   ========================================================= */
+
+.save-button {
+    border: none;
+
+    cursor: pointer;
+
+    padding: 12px 22px;
+
+    border-radius: 11px;
+
+    background: #78967b;
+
+    color: white;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 15px rgba(78, 105, 81, 0.16);
+
+    transition: all 0.25s ease;
+}
+
+.save-button:hover {
+    background: #66846a;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(78, 105, 81, 0.2);
+}
+
+.save-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+   ========================================================= */
+
+.bottom-note {
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #a08f8a;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .new-entry-content {
+        margin-left: 210px;
+
+        padding: 35px 30px 50px;
+    }
+
+    .entry-main {
+        max-width: 800px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .new-entry-content {
+        margin-left: 0;
+
+        padding: 25px 18px 45px;
+    }
+
+    .entry-topbar {
+        margin-bottom: 28px;
+    }
+
+    .entry-page-title h1 {
+        font-size: 20px;
+    }
+
+    .entry-page-title p {
+        font-size: 11px;
+    }
+
+    .back-button {
+        font-size: 12px;
+
+        padding: 9px 12px;
+    }
+
+    .entry-intro h2 {
+        font-size: 29px;
+    }
+
+    .entry-card {
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .new-entry-content {
+        padding: 20px 15px 40px;
+    }
+
+    .entry-topbar {
+        align-items: flex-start;
+    }
+
+    .entry-page-title {
+        text-align: right;
+    }
+
+    .entry-page-title h1 {
+        font-size: 18px;
+    }
+
+    .entry-page-title p {
+        font-size: 10px;
+    }
+
+    .back-button {
+        font-size: 0;
+
+        width: 38px;
+        height: 38px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        border-radius: 10px;
+    }
+
+    .back-button::before {
+        content: "←";
+
+        font-size: 20px;
+    }
+
+    .entry-intro {
+        margin-bottom: 25px;
+    }
+
+    .entry-intro h2 {
+        font-size: 26px;
+    }
+
+    .entry-intro > p:last-child {
+        font-size: 13px;
+    }
+
+    .entry-card {
+        padding: 22px 17px;
+
+        border-radius: 18px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+    .cancel-button,
+    .save-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .form-group textarea {
+        min-height: 190px;
+    }
+}

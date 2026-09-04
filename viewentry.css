@@ -1,0 +1,469 @@
+/* =====================================================
+   DIGIDIARY - VIEW ENTRY
+   Soft Sage + Cream Theme
+   ===================================================== */
+
+
+/* =====================================================
+   GLOBAL RESET
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background: #faf9f3;
+    color: #5f685e;
+}
+
+
+/* =====================================================
+   VIEW PAGE
+   ===================================================== */
+
+.view-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 30px 40px 60px;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.view-header {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+   ===================================================== */
+
+.back-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    text-decoration: none;
+
+    color: #657765;
+
+    background: #e8eee5;
+
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.back-button:hover {
+    background: #dce6d9;
+
+    transform: translateX(-3px);
+}
+
+
+/* =====================================================
+   NEW ENTRY BUTTON
+   ===================================================== */
+
+.new-entry-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: #78967b;
+
+    color: white;
+
+    padding: 11px 19px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+
+    box-shadow: 0 5px 15px rgba(78, 105, 81, 0.12);
+}
+
+.new-entry-button:hover {
+    background: #66866b;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(78, 105, 81, 0.18);
+}
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+.view-main {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   ENTRY CARD
+   ===================================================== */
+
+.entry-view-card {
+    background: #fffdf8;
+
+    border: 1px solid #e5e8dc;
+
+    border-radius: 24px;
+
+    padding: 45px 50px;
+
+    box-shadow:
+        0 10px 30px rgba(53, 68, 56, 0.06);
+}
+
+
+/* =====================================================
+   ENTRY HEADER
+   ===================================================== */
+
+.entry-heading {
+    text-align: center;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #ecece3;
+}
+
+
+/* =====================================================
+   DATE
+   ===================================================== */
+
+.entry-date {
+    color: #c77f8b;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    margin: 0 0 12px;
+}
+
+
+/* =====================================================
+   TITLE
+   ===================================================== */
+
+.entry-heading h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #405a45;
+
+    font-size: 34px;
+
+    line-height: 1.25;
+
+    margin: 0 0 15px;
+
+    font-weight: 700;
+
+    word-wrap: break-word;
+}
+
+
+/* =====================================================
+   MOOD
+   ===================================================== */
+
+.mood {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #edf3e9;
+
+    color: #627260;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ENTRY CONTENT
+   ===================================================== */
+
+.entry-content {
+    padding: 35px 10px;
+
+    color: #626b61;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =====================================================
+   ACTIONS
+   ===================================================== */
+
+.entry-actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #ecece3;
+}
+
+
+/* =====================================================
+   EDIT BUTTON
+   ===================================================== */
+
+.edit-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: #e4eee0;
+
+    color: #59705b;
+
+    padding: 11px 20px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.edit-button:hover {
+    background: #d6e4d2;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+   ===================================================== */
+
+.delete-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: #f5e5e6;
+
+    color: #ad7078;
+
+    padding: 11px 20px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.delete-button:hover {
+    background: #efd7da;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .view-page {
+        padding: 25px 25px 50px;
+    }
+
+    .entry-view-card {
+        padding: 38px 35px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL TABLET
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .view-page {
+        padding: 20px 18px 40px;
+    }
+
+    .view-header {
+        margin-bottom: 22px;
+    }
+
+    .entry-view-card {
+        padding: 30px 25px;
+
+        border-radius: 20px;
+    }
+
+    .entry-heading h1 {
+        font-size: 29px;
+    }
+
+    .entry-content {
+        padding: 28px 5px;
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+    .view-page {
+        padding: 15px 12px 35px;
+    }
+
+    .view-header {
+        gap: 10px;
+    }
+
+    .back-button,
+    .new-entry-button {
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+    .entry-view-card {
+        padding: 25px 18px;
+
+        border-radius: 18px;
+    }
+
+    .entry-heading h1 {
+        font-size: 25px;
+    }
+
+    .entry-date {
+        font-size: 12px;
+    }
+
+    .entry-content {
+        padding: 25px 2px;
+
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .entry-actions {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .edit-button,
+    .delete-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .entry-view-card {
+        padding: 22px 15px;
+    }
+
+    .entry-heading h1 {
+        font-size: 22px;
+    }
+
+}

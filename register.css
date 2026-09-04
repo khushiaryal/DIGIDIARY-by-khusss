@@ -1,0 +1,192 @@
+/* =========================================
+   DIGIDIARY - REGISTER PAGE
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background: #f4f1e8;
+    color: #34483b;
+}
+
+/* Main Container */
+
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* Register Card */
+
+.register-card {
+    width: 100%;
+    max-width: 450px;
+    background: #fffdf7;
+    padding: 45px 42px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(52, 72, 59, 0.12);
+    border: 1px solid rgba(126, 149, 132, 0.2);
+}
+
+/* Brand */
+
+.brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    letter-spacing: 3px;
+    font-style: italic;
+    color: #526b58;
+}
+
+.brand p {
+    margin-top: 5px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #8a9b8d;
+}
+
+/* Welcome Text */
+
+.welcome {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.welcome h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #34483b;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    font-size: 14px;
+    color: #89968b;
+}
+
+/* Message */
+
+.message {
+    background: #edf3ed;
+    color: #526b58;
+    border: 1px solid #d4e1d5;
+    padding: 12px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* Input Groups */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #526257;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d4ddd5;
+    border-radius: 10px;
+    background: #fafbf8;
+    color: #34483b;
+    font-size: 14px;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.input-group input::placeholder {
+    color: #a7afa9;
+}
+
+.input-group input:focus {
+    border-color: #7d967f;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(125, 150, 127, 0.12);
+}
+
+/* Register Button */
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 11px;
+    background: #6f8873;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: #5d7562;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(82, 107, 88, 0.18);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Login Link */
+
+.login-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #89968b;
+}
+
+.login-link a {
+    color: #526b58;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+
+    .register-card {
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+
+    .brand h1 {
+        font-size: 28px;
+    }
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+}
